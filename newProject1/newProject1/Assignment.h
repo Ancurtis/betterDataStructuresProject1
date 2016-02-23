@@ -14,12 +14,14 @@ private:
 	Date due_date;
 	Assignment_Status status;
 	string description;
+	bool isLate;
 public:
 	Assignment(Date assigned_date, Date due_date, Assignment_Status status, string description) { //Kuhail said ok to define here, instead of leaving prototype
 		this->assigned_date = assigned_date;
 		this->due_date = due_date;
 		this->status = status;
 		this->description = description;
+		isLate = false;
 	}
 	Date getAssignedDate()
 	{
@@ -34,6 +36,8 @@ public:
 		cout << "Enter new description for the assignment" << endl;
 		cin >> description;
 	}
-
-
+	void editDueDate(Date dueDate)
+	{
+		due_date = dueDate;
+	}
 };

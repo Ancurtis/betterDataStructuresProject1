@@ -73,9 +73,11 @@ public:
 		//Declarations:
 		list<Assignment>::iterator itr = assigned.begin();
 		int userChoice;
+		Date tempDate;
+		bool wasFound = false;
 		///////////////
 
-		//need to add checks for if assignment is not in list or due date is invalid
+		//need to add checks for if due date is invalid
 
 		while (itr != assigned.end())
 		{
@@ -88,7 +90,9 @@ public:
 					switch (userChoice)
 					{
 					case 1:
-
+						cout << "Enter new due date:" << endl;
+						cin >> tempDate;
+						itr->editDueDate(tempDate);
 						break;
 					case 2:
 						itr->editDescription;
@@ -99,7 +103,13 @@ public:
 						break;
 					}
 				}
+				wasFound = true;
 			}
+			itr++;
+		}
+		if (wasFound = false)
+		{
+			cout << "Assignment is not in the list. Try again" << endl;
 		}
 	}
 	void sortAssignments() // One of my delegated functions - William
@@ -108,6 +118,10 @@ public:
 		list<Assignment>::iterator itr = assigned.begin();
 		Date dueSoon = itr->getDueDate();
 		///////////////
+
+	}
+	void completeAssignment()
+	{
 
 	}
 };
