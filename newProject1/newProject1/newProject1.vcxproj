@@ -149,7 +149,6 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Assigned.h" />
     <ClInclude Include="Assignment.h" />
     <ClInclude Include="AssignmentManager.h" />
     <ClInclude Include="Completed.h" />

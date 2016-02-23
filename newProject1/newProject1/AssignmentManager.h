@@ -6,6 +6,7 @@
 #pragma once
 #include "Assignment.h"
 #include "Header.h"
+#include "Date.h"
 
 class Assignment_Manager {
 private:
@@ -22,11 +23,12 @@ public:
 			{
 				cout << "Cannot add late assignments." << endl;
 			}
-			// what qualifies as an invalid date? needs to be rejected here also
-			// also need to add which list im sending it to, assigned/completed
+			// need to add valid_date
 
-		Assignment assignment(assigned_date, due_date, status, description);
-		assigned.push_back(assignment);
+			Assignment assignment(assigned_date, due_date, status, description);
+			assigned.push_back(assignment);
+
+		}
 		
 				
 	}
@@ -59,7 +61,7 @@ public:
 		while (itr != assigned.end())
 		{
 			Assignment assignment = *itr;
-			if (assignment.getDueDate() < assigned_date || assignment.getDueDate == assigned_date)
+			if (assignment.getDueDate() < assignment.getAssignedDate || assignment.getDueDate == assignment.getAssignedDate)
 			{
 				lateCount++;
 			}
