@@ -21,7 +21,7 @@ public:
 		this->status = status;
 		this->description = description;
 	}
-	Date getAssignedDate() 
+	Date getAssignedDate()
 	{
 		return assigned_date;
 	}
@@ -29,7 +29,11 @@ public:
 	{
 		return due_date;
 	}
-
+	void editDescription()
+	{
+		cout << "Enter new description for the assignment" << endl;
+		cin >> description;
+	}
 
 
 };

@@ -68,5 +68,47 @@ public:
 			cout << "You have " << lateCount << " late assignments." << endl;
 		}
 	}
+	void editAssignment(Date specifiedDate) // One of my delegated functions - William
+	{
+		//Declarations:
+		list<Assignment>::iterator itr = assigned.begin();
+		int userChoice;
+		///////////////
+
+		//need to add checks for if assignment is not in list or due date is invalid
+
+		while (itr != assigned.end())
+		{
+			if (itr->getDueDate == specifiedDate)
+			{
+				cout << "Would you like to edit the due date (1) or the description (2)?" << endl;
+				while (userChoice != 1 || userChoice != 2)
+				{
+					cin >> userChoice;
+					switch (userChoice)
+					{
+					case 1:
+
+						break;
+					case 2:
+						itr->editDescription;
+						cout << "Description edited!" << endl;
+						break;
+					default:
+						cout << "Invalid option, try again" << endl;
+						break;
+					}
+				}
+			}
+		}
+	}
+	void sortAssignments() // One of my delegated functions - William
+	{
+		//Declarations:
+		list<Assignment>::iterator itr = assigned.begin();
+		Date dueSoon = itr->getDueDate();
+		///////////////
+
+	}
 };
 //check out vector application,  phone directory

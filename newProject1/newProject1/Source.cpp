@@ -5,7 +5,6 @@
 
 
 #include "AssignmentManager.h"
-#include "Completed.h"
 #include "Date.h"
 #include "StringTokenizer.h"
 #include <iostream>

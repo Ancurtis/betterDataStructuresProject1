@@ -26,9 +26,6 @@
     <ClInclude Include="AssignmentManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Completed.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
