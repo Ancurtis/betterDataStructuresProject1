@@ -3,7 +3,7 @@
 // 17 February 2016
 // Source.cpp
 
-#include "Assigned.h"
+
 #include "AssignmentManager.h"
 #include "Completed.h"
 #include "Date.h"
